@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "useDefineForClassFields": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "strict": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "strictNullChecks": false,
+        "useUnknownInCatchVariables": false,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "lib": ["esnext", "dom"]
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/typings.d.tsd.ts"]
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/webapp/favicon.ico" sizes="32x32"/>
+        <link rel="icon" href="/webapp/favicon.ico" sizes="192x192"/>
+        <link rel="apple-touch-icon" href="/webapp/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="description" content="Remove background noise from your audio and video.  Just upload your files and our AI will remove noise and download your new clean file quickly!" />
+        <title>Remove Background Noise From Audio and Video</title>
+        <style>
+            @font-face {
+                font-family: "Open Sans";
+                src: url("/OpenSans-Regular.woff");
+            }
+            *{ font-family: "Open Sans", Arial, Helvetica, sans-serif}
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+
+
+        <script type="module" src="/src/main.ts" ></script>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css">
+        <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+        <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+
+        <!-- Global site tag (gtag.js) - Google Ads: 10814930481 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10814930481"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        if(!window.webkit || !window.webkit.messageHandlers) {
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-10814930481');
+        }
+        </script>
+        <script async src="https://js.stripe.com/v3/"></script>
+        <script>
+        // (function(w,d,t,r,u) {
+        //     var f,n,i;
+        //     w[u]=w[u]||[],f=function() {
+        //         var o={ti:"137032448"};
+        //         o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")
+        //     },
+        //     n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function() {
+        //         var s=this.readyState;
+        //         s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)
+        //     },
+        //     i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)
+        // })(window,document,"script","//bat.bing.com/bat.js","uetq");
+        </script>
+    </body>
+</html>

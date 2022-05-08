@@ -1,0 +1,37 @@
+{
+    "dependencies": {
+        "@types/jws": "^3.2.4",
+        "@types/nodemailer": "^6.4.4",
+        "aws-sdk": "^2.1123.0",
+        "axios": "^0.26.0",
+        "base-x": "^3.0.8",
+        "bcrypt": "^5.0.1",
+        "dotenv": "^10.0.0",
+        "download": "^8.0.0",
+        "fastify": "^3.22.1",
+        "fastify-cors": "^6.0.2",
+        "fastify-file-upload": "^3.0.0",
+        "fastify-formbody": "^5.2.0",
+        "fastify-static": "^4.4.2",
+        "google-auth-library": "^7.14.1",
+        "mime-types": "^2.1.33",
+        "moment": "^2.29.1",
+        "mysql2": "^2.3.2",
+        "node-jose": "^2.0.0",
+        "nodemailer": "^6.7.2",
+        "send": "^0.17.1",
+        "sendmail": "^1.6.1",
+        "source-map-support": "^0.5.20"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.0",
+        "@types/node": "^16.11.1",
+        "@types/send": "^0.17.1",
+        "@types/sendmail": "^1.4.4",
+        "esbuild": "^0.13.8",
+        "esbuild-node-tsc": "^1.7.0",
+        "nodemon": "^2.0.14",
+        "ts-morph": "^14.0.0",
+        "typescript": "^4.4.4"
+    }
+}

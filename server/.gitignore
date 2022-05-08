@@ -1,0 +1,9 @@
+build/
+tmp/
+*.wav
+*.mp3
+*.av1
+*.m4a
+*.mp4
+*.mov
+sent_emails/*

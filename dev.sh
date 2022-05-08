@@ -1,0 +1,1 @@
+(cd server && ./dev.sh) & (cd client && ./dev.sh)

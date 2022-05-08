@@ -1,0 +1,10 @@
+{
+    "watch": ["src"],
+    "ignore": ["src/**/*.test.ts"],
+    "ext": "ts,mjs,js,json,graphql",
+    "exec": "etsc && node ./build/main.js",
+    "legacyWatch": true,
+    "env": {
+        "NODE_EXTRA_CA_CERTS": "internal_key.pem"
+    }
+}

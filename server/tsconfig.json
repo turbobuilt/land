@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es2020",
+        "module": "ES2020",
+        "moduleResolution": "Node",
+        "strict": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "esModuleInterop": true,
+        "lib": ["esnext"],
+        "strictNullChecks":false,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "useUnknownInCatchVariables": false,
+        "outDir": "build",
+        "noImplicitAny": false
+    },
+    "include": ["src/**/*.ts"]
+}
+  
