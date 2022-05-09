@@ -2,44 +2,32 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHashHistory } from "vue-router";
 import { router } from "./router";
-import WaveUI from 'wave-ui'
-import 'wave-ui/dist/wave-ui.css'
 import axios from 'axios';
 import { store } from './store';
+import { createVuetify } from 'vuetify'
+import vuetify from './plugins/vuetify'
+import "vuetify/dist/vuetify.min.css";
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
 
-if(store.isIosApp && !store.iosAppOptions) {
-    let numChecks = 0;
-    function checkOptions() {
-        setTimeout(() => {
-            ++numChecks;
-            store.iosAppOptions = (window as any).iosAppOptions;
-            if(!store.iosAppOptions && numChecks < 20) {
-                checkOptions();
-            }
-        }, 1000);
-    }
-    checkOptions();
+export function initVuetify() {
+    return createVuetify({
+        icons: {
+            defaultSet: 'mdi',
+        },
+        components,
+        directives,
+    } as any);
 }
+const vuetify = initVuetify();
+console.log(vuetify);
 
-let script = document.createElement('script') as HTMLScriptElement;
-script.setAttribute("async","");
-if(window.location.href.indexOf('localhost') > -1 || window.location.href.indexOf('staging') > -1) {
-    script.src = "https://sandbox.web.squarecdn.com/v1/square.js";
-} else {
-    script.src = "https://web.squarecdn.com/v1/square.js";
-}
-document.body.appendChild(script);
 
-var app = createApp(App)
-new WaveUI(app, {
-    colors: {
-        primary: "#4473e6",
-        info: "#3B9FEF",
-        secondary: "#4378e7"
-    }
-});
 
+var app = createApp(App);
+
+app.use(vuetify);
 app.use(router);
 app.mount('#app')
 

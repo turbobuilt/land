@@ -1,11 +1,11 @@
 import { RowDataPacket } from "mysql2";
-import { createGuid, db } from "./db"
+import { createGuid, db } from "./lib/db"
 
 var migrations = [
-    "CREATE TABLE user (guid BINARY(22) PRIMARY KEY, created_at DATETIME, INDEX (created_at), updated_at DATETIME, INDEX (updated_at), email VARCHAR(150), INDEX (email), password_hash VARCHAR(300), activated TINYINT DEFAULT 0)",
-    "CREATE TABLE file (guid BINARY(22) PRIMARY KEY, created_at DATETIME, INDEX (created_at), updated_at DATETIME, INDEX (updated_at), user BINARY(22), FOREIGN KEY (user) REFERENCES user (guid), anonymous_user_token BINARY(22), INDEX (anonymous_user_token), file_name VARCHAR(150), mime_type VARCHAR(35), status VARCHAR(35), INDEX (status), size BIGINT)",
+    "CREATE TABLE user (guid BINARY(22) PRIMARY KEY, created_at DATETIME, INDEX (created_at), updated_at DATETIME, INDEX (updated_at), email VARCHAR(150), INDEX (email), password_hash VARCHAR(300), first_name VARCHAR(100), INDEX (first_name), last_name VARCHAR(100), INDEX (last_name), phone VARCHAR(20), INDEX (phone), address_line_1 VARCHAR(100), address_line_2 VARCHAR(100), city VARCHAR(100), region VARCHAR(100), postal_code VARCHAR(20))",
     
 ];
+
 
 const storedProcedures = {
     
